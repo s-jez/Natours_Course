@@ -6,16 +6,17 @@ DarkGreen: #28b485
 // Every browser to render website in the same way
 // Simple reset via universal selector
 */
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* box model, paddings and borders are added to height and width */
+  box-sizing: inherit;
 }
 html {
-  font-size: 10px; /* root font size */
+  font-size: 62.5%; /* root font size */
 }
 /* Set font properties, inheritance of fonts */
 body {
+  box-sizing: border-box; /* box model, paddings and borders are added to height and width */
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
@@ -32,15 +33,15 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-.logo {
+.header__logo {
   height: 3.5rem;
 }
-.text-box {
+.header__text-box {
   position: absolute;
   text-align: center;
   top: 40%;
@@ -54,14 +55,14 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 4.5rem;
   animation: moveInLeft 1s ease-out;
 }
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -122,7 +123,7 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
 }
-.btn-white {
+.btn--white {
   background-color: white;
 }
 .btn::after {
@@ -144,7 +145,12 @@ body {
   transform: scaleX(1.2) scaleY(1.4);
   opacity: 0;
 }
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 1.5s ease-out;
   animation-fill-mode: backwards;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 35%;
+  }
 }
