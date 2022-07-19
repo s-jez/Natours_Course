@@ -39,6 +39,7 @@ body {
 }
 .text-box {
   position: absolute;
+  text-align: center;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -48,6 +49,7 @@ body {
   text-transform: uppercase;
   
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 .heading-primary-main {
   display: block;
@@ -88,4 +90,58 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  color: #000;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.btn-white {
+  background-color: white;
+}
+.btn::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+.btn-white::after {
+  background-color: white;
+}
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0;
+}
+.btn-animated {
+  animation: moveInBottom 1.5s ease-out;
+  animation-fill-mode: backwards;
 }
