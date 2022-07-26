@@ -1,0 +1,35 @@
+.row {
+  display: flex;
+  max-width: $grid-width;
+  margin: 0 auto;
+  background-color: #eee;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  [class^="col-"] {
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+  }
+  .col-1-of-2 {
+    flex-basis: calc((100% - #{$gutter-horizontal}) / 2);
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-3 {
+    flex-basis: calc((100% - #{$gutter-horizontal}) / 3);
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-4 {
+    flex-basis: calc((100% - #{$gutter-horizontal}) / 4);
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-2-of-3, .col-3-of-4 {
+    flex-basis: calc((100% - #{$gutter-horizontal}) / 1);
+  }
+}
