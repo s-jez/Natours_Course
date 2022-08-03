@@ -110,7 +110,7 @@ body {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.25rem 4rem;
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
@@ -132,6 +132,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #7ed56f;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--green::after {
+    background-color: #7ed56f; }
 
 .btn::after {
   position: absolute;
@@ -246,6 +252,77 @@ body {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card .card__heading-span {
+    position: absolute;
+    top: 20%; }
+    .card .card__heading-span--1 {
+      background: linear-gradient(to right bottom, #ffb900, #ff9d00); }
+    .card .card__heading-span--2 {
+      background: linear-gradient(to right bottom, #2998ff, #5643fa); }
+    .card .card__heading-span--3 {
+      background: linear-gradient(to right bottom, #55c57a, #28b485); }
+  .card .card__picture {
+    height: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(75%); }
+    .card .card__picture--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.3), rgba(255, 157, 0, 0.5)), url("/img/nat-5.jpg"); }
+    .card .card__picture--2 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.3), rgba(86, 67, 250, 0.55)), url("/img/nat-6.jpg"); }
+    .card .card__picture--3 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.3), rgba(40, 180, 133, 0.55)), url("/img/nat-7.jpg"); }
+  .card__details {
+    color: #000; }
+    .card__details ul {
+      list-style: none;
+      padding: 1rem;
+      margin: auto; }
+      .card__details ul li {
+        font-size: 1.6rem;
+        margin: 1.5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .card__price--only {
+    font-size: 1.25rem; }
+  .card__price--value {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 5rem; }
+
+.story {
+  display: flex;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: skewX(-7deg); }
+  .story__shape {
+    position: relative; }
+    .story__shape--caption {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, 50%) skewX(7deg);
+      color: #fff;
+      font-size: 1.35rem; }
+  .story__text {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    transform: skewX(7deg); }
+  .story__image {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    filter: brightness(70%);
+    transform: skewX(7deg); }
 
 .header {
   position: relative;
@@ -309,5 +386,9 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 10rem;
   margin-top: 10rem; }
+
+.section-stories {
+  background-color: #f7f7f7;
+  padding: 10rem; }

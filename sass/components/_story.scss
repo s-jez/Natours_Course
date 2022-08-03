@@ -1,0 +1,31 @@
+.story {
+  display: flex;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+  transform: skewX(-7deg);
+  &__shape {
+    position: relative;
+    &--caption {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, 50%) skewX(7deg);
+      color: #fff;
+      font-size: 1.35rem;
+    }
+  }
+  &__text {
+    font-size: $default-font-size;
+    margin-left: 2rem;
+    transform: skewX(7deg);
+  }
+  &__image {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    filter: brightness(70%);
+    transform: skewX(7deg);
+  }
+}
