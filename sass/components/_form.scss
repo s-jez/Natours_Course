@@ -1,0 +1,11 @@
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.form__input {
+  width: 18rem;
+  height: 3rem;
+  border: 0;
+  outline: 1px solid #eee;
+}
