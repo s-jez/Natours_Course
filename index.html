@@ -315,21 +315,33 @@
                     type="text"
                     class="form__input"
                     placeholder="Fill your name!"
+                    minlength="3"
                     id="input1"
                     required
                   />
-                  <label for="#input1">Fill your name!</label>
+                  <label for="#input1">Full name</label>
                 </div>
                 <div class="form__group">
                   <input
                     type="email"
                     class="form__input"
                     placeholder="Fill your email!"
+                    min="4"
+                    max="16"
                     id="input2"
                     required
                   />
-                  <label for="#input2">Fill your email!</label>
+                  <label for="#input2">Email address</label>
                 </div>
+                <div class="form__radios">
+                  <input type="radio" id="radio1" class="radio" name="radio" />
+                  <label for="radio1">Small tour group</label>
+                  <input type="radio" id="radio2" class="radio" name="radio" />
+                  <label for="radio2">Large tour group</label>
+                </div>
+                <button class="form__button btn" type="submit">
+                  NEXT STEP ->
+                </button>
               </form>
             </div>
           </div>
