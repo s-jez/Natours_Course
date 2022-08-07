@@ -31,10 +31,18 @@
     height: 4.5rem;
     background-color: $color-primary-dark;
     border-radius: 2rem;
+    font-size: 1rem;
     color: white;;
-    border: 0;
+    border: none;
     padding: 14px;
     margin: auto;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+      font-size: 1.25rem;
+      animation: btnUp 2s infinite;
+      overflow: hidden; 
+    }
   }
   
   &__label {
@@ -61,6 +69,7 @@
     }
     &:nth-of-type(4) {
       flex-direction: row;
+      margin: 2rem;
     }
   }
   &__radios {
@@ -81,7 +90,7 @@
       color: currentColor;
       width: 3.45rem;
       height: 3.45rem;
-      border: 0.25rem solid currentColor;
+      border: 0.5rem solid $color-primary-dark;
       border-radius: 50%;
       transform: translateY(-0.075rem);
       transition: all .4s;
@@ -94,6 +103,7 @@
         transform: scale(0);
         transition: 120ms transform ease-in-out;
         box-shadow: inset 1rem 1rem $color-primary-dark;
+        transition: all .3s ease-in;
       }
       &:checked::before {
         transform: scale(1);
@@ -104,5 +114,16 @@
         outline: 1px solid #eee;
       }
     }
+  }
+}
+@keyframes btnUp {
+  0% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
