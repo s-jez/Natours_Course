@@ -319,7 +319,7 @@
                     id="input1"
                     required
                   />
-                  <label for="#input1">Full name</label>
+                  <label for="#input1" class="form__label">Full name</label>
                 </div>
                 <div class="form__group">
                   <input
@@ -331,13 +331,17 @@
                     id="input2"
                     required
                   />
-                  <label for="#input2">Email address</label>
+                  <label for="#input2" class="form__label">Email address</label>
                 </div>
-                <div class="form__radios">
-                  <input type="radio" id="radio1" class="radio" name="radio" />
-                  <label for="radio1">Small tour group</label>
-                  <input type="radio" id="radio2" class="radio" name="radio" />
-                  <label for="radio2">Large tour group</label>
+                <div class="form__group">
+                  <label class="form__radios">
+                    <input type="radio" name="radio" />
+                    Small tour group
+                  </label>
+                  <label class="form__radios">
+                    <input type="radio" name="radio" />
+                    Large tour group
+                  </label>
                 </div>
                 <button class="form__button btn" type="submit">
                   NEXT STEP ->
