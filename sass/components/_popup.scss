@@ -15,37 +15,48 @@
     width: 80%;
     height: 70vh;
     background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: 15px;
+    overflow: hidden;
   }
-  &__images {
+  &__left {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 33.333%;
     background-color: black;
   }
-  &__section {
+  &__right {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 67%;
+    width: 100%;
     padding: 5rem;
     margin: 0 3rem;
-    h3 {
+    h2 {
+      display: block;
       font-size: 5rem;
       color: $color-primary-dark;
     }
-    span {
+    h3 {
       font-size: 1.8rem;
       color: $color-grey-dark;
       font-weight: 600;
     }
   }
-  &__paragraphs {
+  &__section {
     display: flex;
     margin: 2rem 0;
     font-size: 1.2rem;
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 5rem;
+    column-gap: 5rem;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
     p:first-child {
       border-right: 1px solid #eee;
-      margin-right: 1rem;
     }
   }
   &__button {
@@ -59,6 +70,9 @@
     padding: 14px;
     cursor: pointer;
     transition: all .5s;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
     &:hover {
       font-size: 1.25rem;
       animation: btnUp 2s infinite;
