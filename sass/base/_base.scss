@@ -1,18 +1,19 @@
 *, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-body {
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%; /* root font size */
-  @media (max-width: 768px) {
-      font-size: 35%;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
   }
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+body {
+    box-sizing: border-box;
+  }
+html {
+    font-size: 62.5%;
+    @media (max-width: 768px) {
+      font-size: 35%;
+    }
 }
+   /* root font size */

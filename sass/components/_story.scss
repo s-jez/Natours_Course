@@ -1,45 +1,47 @@
 .story {
-  display: flex;
-  padding: 5rem;
-  background-color: rgba($color-white, .6);
-  box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
-  transform: skewX(-7deg);
+    background-color: rgba($color-white, .6);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+    display: flex;
+    padding: 5rem;
+    transform: skewX(-7deg);
+
   &__shape {
-    position: relative;
+      position: relative;
+
     &--caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 20%);
-      color: #fff;
-      font-size: 1.75rem;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1;
-      opacity: 0;
-      transition: all .5s;
-      backface-visibility: hidden;
+        backface-visibility: hidden;
+        color: #fff;
+        font-size: 1.75rem;
+        left: 50%;
+        line-height: 1;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translate(-50%, 20%);
+        transition: all .5s;
+      }
+    }
+  &:hover &__shape--caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  &__text {
+      font-size: $default-font-size;
+      margin-left: 2rem;
+      transform: skewX(7deg);
+    }
+  &__image {
+      clip-path: circle(50% at 50% 50%);
+      filter: brightness(70%) hue-rotate(45deg);
+      height: 15rem;
+      position: relative;
+      transform: skewX(7deg);
+      transition: blur .5s ease-in;
+      width: 15rem;
+    }
+  &:hover &__image {
+      filter: blur(3px) brightness(70%);
     }
   }
-  &:hover &__shape--caption {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  &__text {
-    font-size: $default-font-size;
-    margin-left: 2rem;
-    transform: skewX(7deg);
-  }
-  &__image {
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    clip-path: circle(50% at 50% 50%);
-    filter: brightness(70%) hue-rotate(45deg);
-    transform: skewX(7deg);
-    transition: blur .5s ease-in;
-  }
-  &:hover &__image {
-    filter: blur(3px) brightness(70%);
-  }
-}
