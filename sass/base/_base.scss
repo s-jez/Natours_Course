@@ -15,5 +15,17 @@ html {
     @include for-size(phone) {
       font-size: 30%;
     }
+    @include for-size(tablet-portrait) {
+      font-size: 40%;
+    }
+    @include for-size(tablet-landscape) {
+      font-size: 50%;
+    }
+    @include for-size(desktop-up) {
+      font-size: 60%;
+    }
+    @include for-size(big-desktop-up) {
+      font-size: 70%;
+    }
 }
    /* root font size */
