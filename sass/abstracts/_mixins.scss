@@ -16,3 +16,21 @@
     display: flex;
     justify-content: center;
   }
+
+// Media Queries in SASS - mixins
+
+@mixin phone {
+  @media (max-width: 599px) { @content; }
+}
+@mixin tablet-portrait {
+  @media (min-width: 600px) { @content; }
+}
+@mixin tablet-landscap {
+  @media (min-width: 900px) { @content; }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}

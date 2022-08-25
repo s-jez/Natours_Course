@@ -12,8 +12,8 @@ body {
   }
 html {
     font-size: 62.5%;
-    @media (max-width: 768px) {
-      font-size: 35%;
+    @media (max-width: 600px) {
+      font-size: 30%;
     }
 }
    /* root font size */
