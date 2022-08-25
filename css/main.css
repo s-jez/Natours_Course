@@ -17,10 +17,10 @@ html {
       font-size: 30%; } }
   @media (min-width: 37.5em) {
     html {
-      font-size: 40%; } }
+      font-size: 45%; } }
   @media (min-width: 56.25em) {
     html {
-      font-size: 50%; } }
+      font-size: 56.25%; } }
   @media (min-width: 75em) {
     html {
       font-size: 60%; } }

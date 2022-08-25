@@ -4,7 +4,7 @@
     padding: 0;
   }
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 1 rem = 10px
     scroll-behavior: smooth;
   }
 body {
@@ -16,10 +16,10 @@ html {
       font-size: 30%;
     }
     @include for-size(tablet-portrait) {
-      font-size: 40%;
+      font-size: 45%;
     }
     @include for-size(tablet-landscape) {
-      font-size: 50%;
+      font-size: 56.25%;
     }
     @include for-size(desktop-up) {
       font-size: 60%;
@@ -27,5 +27,5 @@ html {
     @include for-size(big-desktop-up) {
       font-size: 70%;
     }
-}
+  }
    /* root font size */
